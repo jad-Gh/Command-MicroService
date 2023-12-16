@@ -1,0 +1,26 @@
+@CommandService_HostAddress = http://localhost:5072
+
+GET http://acme.com/api/Platform
+Accept: application/json
+
+###
+
+###Using NodePort
+POST http://localhost:32081/api/Platform
+Content-Type: application/json
+
+{
+  "name":"hi",
+  "publisher":"hello",
+  "cost":"free"
+}
+
+###Using ingress nginx
+POST http://acme.com/api/Platform
+Content-Type: application/json
+
+{
+  "name":"hi",
+  "publisher":"hello",
+  "cost":"free"
+}
